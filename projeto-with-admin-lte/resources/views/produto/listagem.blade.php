@@ -23,6 +23,7 @@
     <tr>
         <td></td>
         <td>NOME</td>
+        <td>CATEGORIA</td>
         <td style="text-align: center">VALOR</td>
         <td>DESCRIÇÃO</td>
         <td>QTD</td>
@@ -35,6 +36,9 @@
             <a href="/produtos/mostra/{{$p->id}}">
                 {{$p->nome}}
             </a>
+        </td>
+        <td>
+            {{$p->categoria->nome}}
         </td>
         <td style="text-align: center">R$ {{$p->valor}}</td>
         <td class="col-md-3">{{$p->descricao}}</td>
@@ -69,10 +73,4 @@
     </h4>
     @endif
 </table>
-@if(old('nome'))
-<div class="alert alert-success">
-    <strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado.
-</div>
-@endif
-
 @stop

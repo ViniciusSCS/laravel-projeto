@@ -16,6 +16,7 @@
     
     <div class="content-wrapper">
         @include('layouts.partials.contentheader')
+        @include('partials.message')
 
         <section class="content">
             @yield('conteudo')
