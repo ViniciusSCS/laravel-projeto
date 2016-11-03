@@ -15,7 +15,7 @@
             <select class="form-control" required>
                 <option value="">Seleciona uma Categoria</option>
                 @foreach ($categorias as $c)
-                <option value="{{$c->idCategorias}}">{{$c->nome}}</option>
+                <option value="{{$c->idCategoria}}">{{$c->nome}}</option>
                 @endforeach
             </select>
         </div>

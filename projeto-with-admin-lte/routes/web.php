@@ -12,9 +12,9 @@
 */
 
 Route::get('/produtos', 'ProdutoController@lista')->name('produtos.lista');
-Route::get('/produtos/novo', 'ProdutoController@novo');
-Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
+Route::get('/produtos/novo', 'ProdutoController@novo')->name('produtos.novo');
+Route::post('/produtos/adiciona', 'ProdutoController@adiciona')->name('produtos.adiciona');
 Route::post('/produtos/atualizar/{id}', 'ProdutoController@atualizar')->name('produtos.atualizar');
-Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra');
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->name('produtos.mostra');
 Route::get('/produtos/alterar/{id}', 'ProdutoController@alterar')->name('produtos.alterar');
-Route::get('/produtos/excluir/{id}', 'ProdutoController@excluir');
+Route::get('/produtos/excluir/{id}', 'ProdutoController@excluir')->name('produtos.exclui');

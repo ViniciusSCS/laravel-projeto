@@ -8,7 +8,7 @@ class Produto extends Model {
     
     public $timestamps = false;
     
-    protected $fillable = array('nome', 'descricao', 'quantidade', 'valor');//5.0
+    protected $fillable = array('idCategoria', 'nome', 'descricao', 'quantidade', 'valor');//5.0
     
     public function categoria(){
         return $this->belongsTo(Categoria::class, 'idCategoria');
