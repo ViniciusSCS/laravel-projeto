@@ -8,6 +8,10 @@ use App\Categoria;
 
 class ProdutoController extends Controller {
 
+//    public function __construct() {
+//        $this->middleware('autenticador');
+//    }
+
     public function lista() {
         $produtos = Produto::with('categoria')->get();
         return view('produto.listagem')->with('produtos', $produtos);
@@ -31,7 +35,7 @@ class ProdutoController extends Controller {
 //        $produto->save();
         // essa forma de baixo funciona da mesma forma que a forma de cima
         $produto = Produto::create($request->all());
-        
+
         session()->flash('message.success', "O produto $produto->nome foi cadastrado.");
 
         return redirect()->route('produtos.lista');
@@ -59,14 +63,13 @@ class ProdutoController extends Controller {
 //        $flight->save();
 
         Produto::findOrFail($id)->update($request->all());
-        
+
 //        $produto->nome = $request->nome;
 //        $produto->descricao = $request->descricao;
 //        $produto->valor = $request->valor;
 //        $produto->quantidade = $request->quantidade;
 //        
 //        $produto->save();
-
 //        return redirect()->action('ProdutoController@lista');
         return redirect()->route('produtos.lista');
     }

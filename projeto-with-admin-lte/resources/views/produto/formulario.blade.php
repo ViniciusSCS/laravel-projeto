@@ -12,7 +12,7 @@
         </div>
         <div class="col-md-6">
             <label>Categorias</label>
-            <select class="form-control" required>
+            <select name="idCategoria" class="form-control" required>
                 <option value="">Seleciona uma Categoria</option>
                 @foreach ($categorias as $c)
                 <option value="{{$c->idCategoria}}">{{$c->nome}}</option>
