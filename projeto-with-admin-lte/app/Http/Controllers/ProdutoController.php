@@ -49,7 +49,7 @@ class ProdutoController extends Controller {
 
     public function alterar($id) {
 
-        $produto = Produto::find($id);
+        $produto = Produto::find($id)->with('categoria')->get();
 
         return view('produto.alterar')->with('produto', $produto);
     }

@@ -4,11 +4,24 @@
 
 <form action="{{route('produtos.atualizar', $produto->id)}}" method="POST">    
     <input type="hidden" name="_token" value="{{csrf_token()}}">
-    
+
     <div class="form-group">
         <div class="col-md-6">
             <label>Nome</label>
             <input name="nome" value="{{$produto->nome}}" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label>Categoria</label>
+            <select name="idCategoria" class="form-control" required>
+                <option value="">Seleciona uma Categoria</option>
+                @foreach ($categoria as $c)
+                @if($c->idCategoria == $produto->idCategoria)
+                <option value="{{$c->idCategoria}}" selected>{{$c->nome}}</option>
+                @else
+                <option value="{{$c->idCategoria}}" >{{$c->nome}}</option>
+                @endif
+                @endforeach
+            </select>
         </div>
         <div class="col-md-6">
             <label>Valor</label>        
@@ -27,7 +40,7 @@
             <button class="btn btn-success" type="submit">Atualizar</button>
         </div>
     </div>
-    
+
 </form>
 
 @stop
