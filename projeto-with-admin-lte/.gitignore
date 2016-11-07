@@ -1,8 +1,8 @@
 /node_modules
 /public/storage
 /storage/*.key
-!/vendor/acacha/admin-lte-template-laravel/resources/lang/en
 /vendor
+!/vendor/acacha/admin-lte-template-laravel/resources/lang/en
 /.idea
 Homestead.json
 Homestead.yaml
