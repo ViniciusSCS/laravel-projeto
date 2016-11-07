@@ -43,6 +43,11 @@
                     <i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.product') }}</span>
                 </a>
             </li>
+            <li>
+                <a href="{{ url('produtos') }}">
+                    <i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.category') }}</span>
+                </a>
+            </li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

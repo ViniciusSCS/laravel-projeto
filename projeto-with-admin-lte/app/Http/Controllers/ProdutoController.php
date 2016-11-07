@@ -31,10 +31,10 @@ class ProdutoController extends Controller {
         $produto = Produto::create($request->all());
         
         if($produto) {
-            session()->flash('message.success', "O produto $produto->nome foi cadastrado.");
+            session()->flash('message.success', MensagemController::produtoInserir($produto->nome));
             
         }else{
-            session()->flash('message.error', "O produto não foi cadastrado. Tente novamente.");
+            session()->flash('message.error', MensagemController::produtoInserirErro());
         }
         
         return redirect()->route('produtos.lista');
@@ -43,6 +43,13 @@ class ProdutoController extends Controller {
     public function excluir($id) {
         $produto = Produto::find($id);
         $produto->delete();
+        if($produto) {
+            session()->flash('message.success', MensagemController::produtoExcluir($produto->nome));
+            
+        }else{
+            session()->flash('message.error', MensagemController::produtoInserirErro());
+        }
+        
         return redirect()->action('ProdutoController@lista');
     }
 
@@ -58,10 +65,10 @@ class ProdutoController extends Controller {
         
         if($produto) {
             $produto = Produto::findOrFail($id);
-            session()->flash('message.success', "O produto <b>$produto->nome</b> foi atualizado.");
+            session()->flash('message.success', MensagemController::produtoAtualizar($produto->nome));
             
         }else{
-            session()->flash('message.error', "O produto não foi a. Tente novamente.");
+            session()->flash('message.error', MensagemController::produtoAtualizarErro());
         }
         return redirect()->route('produtos.lista');
         
