@@ -29,6 +29,8 @@
             <label>Quantidade</label>
             <input name="quantidade" class="form-control col-md-3" required>
         </div>
+    </div>
+    <div class="form-group">
         <div class="col-md-12">
             <label>Descrição</label>
             <textarea name="descricao" class="form-control" rows="3" style="resize: none;" required></textarea> 

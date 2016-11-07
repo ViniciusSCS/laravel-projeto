@@ -28,16 +28,16 @@ class ProdutoController extends Controller {
     }
 
     public function adiciona(Request $request) {
-
-//        $params = Request::all();
-//        $produto = new Produto($params);
-//        
-//        $produto->save();
-        // essa forma de baixo funciona da mesma forma que a forma de cima
         $produto = Produto::create($request->all());
+        
+        if($produto) {
+            session()->flash('message.success', "O produto $produto->nome foi cadastrado.");
 
-        session()->flash('message.success', "O produto $produto->nome foi cadastrado.");
-
+            
+        }else{
+            session()->flash('message.error', "O produto não foi cadastrado. Tente novamente.");
+        }
+        
         return redirect()->route('produtos.lista');
     }
 
@@ -49,28 +49,13 @@ class ProdutoController extends Controller {
 
     public function alterar($id) {
 
-        $produto = Produto::find($id)->with('categoria')->get();
-
-        return view('produto.alterar')->with('produto', $produto);
+        $produto = Produto::find($id);
+        $categoria = Categoria::all();
+        return view('produto.alterar')->with('produto', $produto)->with('categoria', $categoria);
     }
 
     public function atualizar($id, Request $request) {
-
-//        $flight = App\Flight::find(1);
-//
-//        $flight->name = 'New Flight Name';
-//
-//        $flight->save();
-
         Produto::findOrFail($id)->update($request->all());
-
-//        $produto->nome = $request->nome;
-//        $produto->descricao = $request->descricao;
-//        $produto->valor = $request->valor;
-//        $produto->quantidade = $request->quantidade;
-//        
-//        $produto->save();
-//        return redirect()->action('ProdutoController@lista');
         return redirect()->route('produtos.lista');
     }
 

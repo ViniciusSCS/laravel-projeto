@@ -1,10 +1,10 @@
 @if(Session::has('message.success'))
-<div class="alert alert-success">
-    <strong>Sucesso!</strong> {{Session::get('message.success')}}
-</div>
+<script>
+    toastr["success"]("Sucesso ", "{{Session::get('message.success')}}");
+</script>
 @endif
 @if(Session::has('message.error'))
-<div class="alert alert-danger">
-    <strong>Erro!</strong> {{Session::get('message.error')}}
-</div>
+<script>
+    toastr["error"]("Erro ", "{{Session::get('message.error')}}"");
+</script>
 @endif

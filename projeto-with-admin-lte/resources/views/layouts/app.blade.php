@@ -2,36 +2,41 @@
 
 <html lang="br">
 
-@section('htmlheader')
+    @section('htmlheader')
     @include('layouts.partials.htmlheader')
-@show
+    @show
 
-<body class="skin-blue sidebar-mini">
-<div class="wrapper">
+    <body class="skin-blue sidebar-mini">
+        <div class="wrapper">
 
-    @include('layouts.partials.mainheader')
+            @include('layouts.partials.mainheader')
 
-    @include('layouts.partials.sidebar')
+            @include('layouts.partials.sidebar')
 
-    
-    <div class="content-wrapper">
-        @include('layouts.partials.contentheader')
-        @include('partials.message')
 
-        <section class="content">
-            @yield('conteudo')
-        </section>
-    </div>
+            <div class="content-wrapper">
+                @include('layouts.partials.contentheader')
 
-    @include('layouts.partials.controlsidebar')
+                <div class="form-group col-md-12">
+                    <div class="col-md-6 pull-right">
+                        @include('partials.message')
+                    </div>
+                </div>
 
-    @include('layouts.partials.footer')
+                <section class="content">
+                    @yield('conteudo')
+                </section>
+            </div>
 
-</div>
+            @include('layouts.partials.controlsidebar')
 
-@section('scripts')
-    @include('layouts.partials.scripts')
-@show
+            @include('layouts.partials.footer')
 
-</body>
+        </div>
+
+        @section('scripts')
+        @include('layouts.partials.scripts')
+        @show
+
+    </body>
 </html>
