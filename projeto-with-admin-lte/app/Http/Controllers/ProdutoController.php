@@ -32,7 +32,6 @@ class ProdutoController extends Controller {
         
         if($produto) {
             session()->flash('message.success', "O produto $produto->nome foi cadastrado.");
-
             
         }else{
             session()->flash('message.error', "O produto não foi cadastrado. Tente novamente.");
@@ -55,8 +54,17 @@ class ProdutoController extends Controller {
     }
 
     public function atualizar($id, Request $request) {
-        Produto::findOrFail($id)->update($request->all());
+        $produto = Produto::findOrFail($id)->update($request->all());        
+        
+        if($produto) {
+            $produto = Produto::findOrFail($id);
+            session()->flash('message.success', "O produto <b>$produto->nome</b> foi atualizado.");
+            
+        }else{
+            session()->flash('message.error', "O produto não foi a. Tente novamente.");
+        }
         return redirect()->route('produtos.lista');
+        
     }
 
 }
