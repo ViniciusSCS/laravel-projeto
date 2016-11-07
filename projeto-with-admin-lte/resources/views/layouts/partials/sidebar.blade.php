@@ -35,17 +35,17 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="active">
                 <a href="{{ url('home') }}">
-                    <i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span>
+                    <i class='fa fa-link'></i> <span> Home</span>
                 </a>
             </li>
             <li>
                 <a href="{{ url('produtos') }}">
-                    <i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.product') }}</span>
+                    <i class='fa fa-link'></i> <span> Produtos</span>
                 </a>
             </li>
             <li>
-                <a href="{{ url('produtos') }}">
-                    <i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.category') }}</span>
+                <a href="{{ url('categoria') }}">
+                    <i class='fa fa-link'></i> <span> Categoria</span>
                 </a>
             </li>
         </ul><!-- /.sidebar-menu -->

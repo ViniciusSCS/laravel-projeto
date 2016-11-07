@@ -18,3 +18,7 @@ Route::post('/produtos/atualizar/{id}', 'ProdutoController@atualizar')->name('pr
 Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra')->name('produtos.mostra');
 Route::get('/produtos/alterar/{id}', 'ProdutoController@alterar')->name('produtos.alterar');
 Route::get('/produtos/excluir/{id}', 'ProdutoController@excluir')->name('produtos.exclui');
+
+
+
+Route::get('/categoria', 'CategoriaController@novo')->name('categoria.novo');
