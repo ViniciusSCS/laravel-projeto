@@ -8,7 +8,7 @@
     Você não tem nenhum produto cadastrado.
 </div>
 @else
-<h1>Listagem de produtos com Laravel</h1>
+<h1>Listagem de Produtos</h1>
 
 <div class="row">
     <div class="form-group col-md-12">
@@ -72,6 +72,7 @@
             <div class="label label-danger pull-right ">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                 Um ou menos itens no estoque
+            </div>
         </h4>
         @endif
     </table>
