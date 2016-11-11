@@ -11,6 +11,13 @@ class MensagemController extends Controller {
         return "O produto não foi cadastrado. Tente novamente.";
     }
     
+    public static function categoriaInserir($nome){
+        return "A categoria <b>$nome</b>  foi cadastrada.";
+    }
+    public static function categoriaInserirErro(){
+        return "A Categoria não foi cadastrada. Tente novamente.";
+    }
+    
     public static function produtoAtualizar($nome){
         return "O produto <b>$nome</b>  foi atualizado.";
     }

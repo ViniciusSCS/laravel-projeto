@@ -54,7 +54,6 @@ class ProdutoController extends Controller {
     }
 
     public function alterar($id) {
-
         $produto = Produto::find($id);
         $categoria = Categoria::all();
         return view('produto.alterar')->with('produto', $produto)->with('categoria', $categoria);

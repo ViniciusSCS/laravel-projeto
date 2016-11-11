@@ -4,13 +4,13 @@
 <h1>Destalhes do produto {{$p->nome}} </h1>
 <ul>
     <li>
-        Descrição: {{$p->descricao or 'Não possui descrição '}}
+        <b>Descrição:</b> {{$p->descricao or 'Não possui descrição '}}
     </li>
     <li>
-        Valor: R$ {{$p->valor}}
+        <b>Valor:</b> R$ {{$p->valor}}
     </li>
     <li>
-        Quantidade: {{$p->quantidade}}
+        <b>Quantidade:</b> {{$p->quantidade}}
     </li>
 </ul>
 @stop

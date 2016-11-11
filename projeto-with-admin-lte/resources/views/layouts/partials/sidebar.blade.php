@@ -44,7 +44,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ url('categoria') }}">
+                <a href="{{ url('categorias') }}">
                     <i class='fa fa-link'></i> <span> Categoria</span>
                 </a>
             </li>

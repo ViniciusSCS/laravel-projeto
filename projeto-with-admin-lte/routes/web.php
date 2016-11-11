@@ -21,4 +21,10 @@ Route::get('/produtos/excluir/{id}', 'ProdutoController@excluir')->name('produto
 
 
 
-Route::get('/categoria', 'CategoriaController@novo')->name('categoria.novo');
+Route::get('/categorias', 'CategoriaController@lista')->name('categorias.lista');
+Route::get('/categorias/novo', 'CategoriaController@novo')->name('categorias.novo');
+Route::post('/categorias/adiciona', 'CategoriaController@adiciona')->name('categorias.adiciona');
+Route::post('/categorias/atualizar/{idCategoria}', 'CategoriaController@atualizar')->name('categorias.atualizar');
+Route::get('/categorias/mostra/{idCategoria}', 'CategoriaController@mostra')->name('categorias.mostra');
+Route::get('/categorias/alterar/{idCategoria}', 'CategoriaController@alterar')->name('categorias.alterar');
+Route::get('/categorias/excluir/{idCategoria}', 'CategoriaController@excluir')->name('categorias.exclui');
