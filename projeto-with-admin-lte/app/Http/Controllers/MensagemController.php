@@ -4,31 +4,31 @@ namespace App\Http\Controllers;
 
 class MensagemController extends Controller {
     
-    public static function produtoInserir($nome){
+    public static function msgProdutoInserir($nome){
         return "O produto <b>$nome</b>  foi cadastrado.";
     }
-    public static function produtoInserirErro(){
+    public static function msgProdutoInserirErro(){
         return "O produto não foi cadastrado. Tente novamente.";
     }
     
-    public static function categoriaInserir($nome){
+    public static function msgCategoriaInserir($nome){
         return "A categoria <b>$nome</b>  foi cadastrada.";
     }
-    public static function categoriaInserirErro(){
+    public static function msgCategoriaInserirErro(){
         return "A Categoria não foi cadastrada. Tente novamente.";
     }
     
-    public static function produtoAtualizar($nome){
+    public static function msgProdutoAtualizar($nome){
         return "O produto <b>$nome</b>  foi atualizado.";
     }
-    public static function produtoAtualizarErro(){
+    public static function msgProdutoAtualizarErro(){
         return "O produto não foi excluido. Tente novamente.";
     }
     
-    public static function produtoExcluir($nome){
+    public static function msgProdutoExcluir($nome){
         return "O produto <b>$nome</b>  foi excluido.";
     }
-    public static function produtoExcluirErro(){
+    public static function msgProdutoExcluirErro(){
         return "O produto não foi excluido. Tente novamente.";
     }
     
