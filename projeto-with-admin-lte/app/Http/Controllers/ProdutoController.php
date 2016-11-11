@@ -47,7 +47,7 @@ class ProdutoController extends Controller {
             session()->flash('message.success', MensagemController::produtoExcluir($produto->nome));
             
         }else{
-            session()->flash('message.error', MensagemController::produtoInserirErro());
+            session()->flash('message.error', MensagemController::produtoExcluirErro());
         }
         
         return redirect()->action('ProdutoController@lista');
