@@ -31,10 +31,10 @@ class ProdutoController extends Controller {
         $produto = Produto::create($request->all());
         
         if($produto) {
-            session()->flash('message.success', MensagemController::msgProdutoInserir($produto->nome));
+            session()->flash('message.success', MensagemController::produtoInserir($produto->nome));
             
         }else{
-            session()->flash('message.error', MensagemController::msgProdutoInserirErro());
+            session()->flash('message.error', MensagemController::produtoInserirErro());
         }
         
         return redirect()->route('produtos.lista');
@@ -44,10 +44,10 @@ class ProdutoController extends Controller {
         $produto = Produto::find($id);
         $produto->delete();
         if($produto) {
-            session()->flash('message.success', MensagemController::msgProdutoExcluir($produto->nome));
+            session()->flash('message.success', MensagemController::produtoExcluir($produto->nome));
             
         }else{
-            session()->flash('message.error', MensagemController::msgProdutoExcluirErro());
+            session()->flash('message.error', MensagemController::produtoInserirErro());
         }
         
         return redirect()->action('ProdutoController@lista');
@@ -64,10 +64,10 @@ class ProdutoController extends Controller {
         
         if($produto) {
             $produto = Produto::findOrFail($id);
-            session()->flash('message.success', MensagemController::msgProdutoAtualizar($produto->nome));
+            session()->flash('message.success', MensagemController::produtoAtualizar($produto->nome));
             
         }else{
-            session()->flash('message.error', MensagemController::msgProdutoAtualizarErro());
+            session()->flash('message.error', MensagemController::produtoAtualizarErro());
         }
         return redirect()->route('produtos.lista');
         

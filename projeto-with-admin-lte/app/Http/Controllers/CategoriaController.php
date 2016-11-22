@@ -20,9 +20,9 @@ class CategoriaController extends Controller {
         $categoria = Categoria::create($request->all());
 
         if ($categoria) {
-            session()->flash('message.success', MensagemController::msgCategoriaInserir($categoria->nome));
+            session()->flash('message.success', MensagemController::categoriaInserir($categoria->nome));
         } else {
-            session()->flash('message.error', MensagemController::msgCategoriaInserirErro());
+            session()->flash('message.error', MensagemController::categoriaInserirErro());
         }
 
         return redirect()->route('categorias.lista');
