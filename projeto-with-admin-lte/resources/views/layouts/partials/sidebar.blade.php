@@ -42,12 +42,12 @@
             </li>
             <li>
                 <a href="{{ url('produtos') }}">
-                    <i class='fa fa-link'></i> <span> Produtos</span>
+                    <i class='fa fa-shopping-cart'></i> <span> Produtos</span>
                 </a>
             </li>
             <li>
                 <a href="{{ url('categorias') }}">
-                    <i class='fa fa-link'></i> <span> Categoria</span>
+                    <i class='fa fa-sitemap'></i> <span> Categoria</span>
                 </a>
             </li>
         </ul><!-- /.sidebar-menu -->
