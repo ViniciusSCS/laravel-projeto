@@ -50,7 +50,7 @@ class CategoriaController extends Controller {
     }
 
     public function excluir($idCategoria) {
-        $categoria = Produto::find($idCategoria);
+        $categoria = Categoria::find($idCategoria);
         $categoria->delete();
         if ($categoria) {
             session()->flash('message.success', MensagemController::categoriaExcluir($categoria->nome));
