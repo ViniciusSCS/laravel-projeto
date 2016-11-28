@@ -8,7 +8,7 @@
     <div class="form-group">
         <div class="col-md-6">
             <label>Nome</label>
-            <input name="nome" value="{{categoria->nome}}" class="form-control">
+            <input name="nome" value="{{$categoria->nome}}" class="form-control">
         </div>
     </div>
 
