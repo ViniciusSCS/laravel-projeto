@@ -1,16 +1,31 @@
-<?php
+@extends('layouts.app')
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+@section('conteudo')
 
-/**
- * Description of alterar
- *
- * @author Win19
- */
-class alterar {
-    //put your code here
-}
+<form action="{{route('categorias.atualizar', $categoria->idCategoria)}}" class="form-horizontal" method="POST"> 
+    <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+    <div class="form-group">
+        <div class="col-md-6">
+            <label>Nome</label>
+            <input name="nome" value="{{categoria->nome}}" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-actions clearfix">
+        <div class="pull-left">
+            <button type="submit" class="btn btn-success btn-sm">
+                <i class="fa fa-send fa-fw" aria-hidden="true"></i>
+                Atualizar
+            </button>
+        </div>
+        <div class="pull-right">
+            <div class="col-md-12 text-right text-muted">
+                (*) Campos Obrigatórios
+            </div>
+        </div>
+    </div>
+
+</form>
+
+@stop

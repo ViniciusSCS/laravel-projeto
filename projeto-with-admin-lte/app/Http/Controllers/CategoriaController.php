@@ -29,11 +29,12 @@ class CategoriaController extends Controller {
     }
 
     public function mostra($idCategoria) {
-        
+        //
     }
 
     public function alterar($idCategoria) {
-        
+        $categoria = Categoria::find($idCategoria);
+        return view('categoria.alterar')->with('categoria', $categoria);
     }
 
     public function atualizar(Request $request, $idCategoria) {
