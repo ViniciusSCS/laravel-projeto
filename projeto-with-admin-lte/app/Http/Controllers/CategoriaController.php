@@ -29,7 +29,7 @@ class CategoriaController extends Controller {
     }
 
     public function mostra($idCategoria) {
-        //
+        //não tem no momento.
     }
 
     public function alterar($idCategoria) {
