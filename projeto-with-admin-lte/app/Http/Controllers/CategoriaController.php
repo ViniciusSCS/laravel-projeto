@@ -29,7 +29,8 @@ class CategoriaController extends Controller {
     }
 
     public function mostra($idCategoria) {
-        //não tem no momento.
+        $categoria = Categoria::find($idCategoria);
+        return view('categoria.detalhes')->with('c', $categoria);
     }
 
     public function alterar($idCategoria) {
