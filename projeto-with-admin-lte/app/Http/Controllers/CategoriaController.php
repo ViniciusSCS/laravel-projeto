@@ -38,11 +38,27 @@ class CategoriaController extends Controller {
     }
 
     public function atualizar(Request $request, $idCategoria) {
-        
+        $categoria = Categoria::findOrFail($idCategoria)->update($request->all());
+
+        if ($categoria) {
+            $categoria = Categoria::findOrFail($idCategoria);
+            session()->flash('message.success', MensagemController::categoriaAtualizar($categoria->nome));
+        } else {
+            session()->flash('message.error', MensagemController::categoriaAtualizarErro());
+        }
+        return redirect()->route('categorias.lista');
     }
 
     public function excluir($idCategoria) {
-        
+        $categoria = Produto::find($idCategoria);
+        $categoria->delete();
+        if ($categoria) {
+            session()->flash('message.success', MensagemController::categoriaExcluir($categoria->nome));
+        } else {
+            session()->flash('message.error', MensagemController::categoriaExcluirErro());
+        }
+
+        return redirect()->action('CategoriaController@lista');
     }
 
 }

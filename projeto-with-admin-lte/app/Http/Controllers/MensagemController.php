@@ -25,11 +25,25 @@ class MensagemController extends Controller {
         return "O produto não foi excluido. Tente novamente.";
     }
     
+    public static function categoriaAtualizar($nome){
+        return "A categoria <b>$nome</b>  foi atualizado.";
+    }
+    public static function categoriaAtualizarErro(){
+        return "A categoria não foi excluido. Tente novamente.";
+    }
+    
     public static function produtoExcluir($nome){
         return "O produto <b>$nome</b>  foi excluido.";
     }
     public static function produtoExcluirErro(){
         return "O produto não foi excluido. Tente novamente.";
+    }
+    
+    public static function categoriaExcluir($nome){
+        return "A categoria <b>$nome</b>  foi excluido.";
+    }
+    public static function categoriaExcluirErro(){
+        return "A categoria não foi excluida. Tente novamente.";
     }
     
 }
