@@ -22,14 +22,14 @@ class MensagemController extends Controller {
         return "O produto <b>$nome</b>  foi atualizado.";
     }
     public static function produtoAtualizarErro(){
-        return "O produto não foi excluido. Tente novamente.";
+        return "O produto não foi atualizado. Tente novamente.";
     }
     
     public static function categoriaAtualizar($nome){
         return "A categoria <b>$nome</b>  foi atualizado.";
     }
     public static function categoriaAtualizarErro(){
-        return "A categoria não foi excluido. Tente novamente.";
+        return "A categoria não foi atualizada. Tente novamente.";
     }
     
     public static function produtoExcluir($nome){
