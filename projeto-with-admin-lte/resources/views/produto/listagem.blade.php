@@ -42,7 +42,7 @@
             <td>
                 {{$p->categoria->nome}}
             </td>
-            <td style="text-align: center">R$ {{$p->valor}}</td>
+            <td style="text-align: left">R$ {{$p->valor}}</td>
             <td class="col-md-3">{{str_limit($p->descricao, 30)}}</td>
             <td >{{$p->quantidade}}</td>
             <td data-title="AÇÃO" style="text-align: center">
