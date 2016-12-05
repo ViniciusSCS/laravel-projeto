@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 class MensagemController extends Controller {
     
+    // Sessão para Inserir
+    
     public static function produtoInserir($nome){
         return "O produto <b>$nome</b>  foi cadastrado.";
     }
@@ -17,6 +19,10 @@ class MensagemController extends Controller {
     public static function categoriaInserirErro(){
         return "A Categoria não foi cadastrada. Tente novamente.";
     }
+    
+    //Fim Sessão para Inserir
+    
+    //Sessão para Atualizar
     
     public static function produtoAtualizar($nome){
         return "O produto <b>$nome</b>  foi atualizado.";
@@ -32,6 +38,10 @@ class MensagemController extends Controller {
         return "A categoria não foi atualizada. Tente novamente.";
     }
     
+    //Fim Sessão para Atualizar
+    
+    //Sessão para Excluir
+    
     public static function produtoExcluir($nome){
         return "O produto <b>$nome</b>  foi excluido.";
     }
@@ -45,5 +55,7 @@ class MensagemController extends Controller {
     public static function categoriaExcluirErro(){
         return "A categoria não foi excluida. Tente novamente.";
     }
+    
+    //Fim Sessão para Excluir
     
 }

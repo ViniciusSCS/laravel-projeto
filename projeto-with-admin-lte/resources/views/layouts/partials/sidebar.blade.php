@@ -33,19 +33,19 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
+            <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active">
+            <li id="home" class="treeview ">
                 <a href="{{ url('home') }}">
                     <i class='fa fa-link'></i> <span> Home</span>
                 </a>
             </li>
-            <li>
+            <li id="produtos" class="treeview">
                 <a href="{{ url('produtos') }}">
                     <i class='fa fa-shopping-cart'></i> <span> Produtos</span>
                 </a>
             </li>
-            <li>
+            <li id="categorias" class="treeview">
                 <a href="{{ url('categorias') }}">
                     <i class='fa fa-sitemap'></i> <span> Categoria</span>
                 </a>
