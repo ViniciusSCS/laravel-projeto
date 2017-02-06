@@ -1,0 +1,5 @@
+/vendor/
+!/vendor/acacha/admin-lte-template-laravel/resources/lang/en
+/.idea
+composer.lock
+.php_cs.cache
