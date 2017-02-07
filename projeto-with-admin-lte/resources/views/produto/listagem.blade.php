@@ -32,7 +32,7 @@
             <td style="text-align: center">AÇÕES</td>
         </tr>
         @foreach ($produtos as $p)
-        <tr class='{{$p->quantidade <= 1 ? 'danger' : 'success'}}'>
+        <tr class='{{$p->quantidade <= 2 ? 'danger' : 'success'}}'>
             <td># {{$p->id}}</td>
             <td class="col-md-3">
                 <a href="/produtos/mostra/{{$p->id}}">
@@ -67,7 +67,7 @@
         </tr>
         @endforeach
         @endif
-        @if($p->quantidade <= 1)
+        @if($p->quantidade <= 2)
         <h4>
             <div class="label label-danger pull-right ">
                 <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
