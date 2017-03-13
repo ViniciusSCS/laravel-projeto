@@ -32,7 +32,7 @@
             <td style="text-align: center">AÇÕES</td>
         </tr>
         @foreach ($produtos as $p)
-        <tr class='{{$p->quantidade <= 2 ? 'danger' : 'success'}}'>
+        <tr class="{{$p->quantidade <= 2 ? 'danger' : 'success'}}">
             <td># {{$p->id}}</td>
             <td class="col-md-3">
                 <a href="/produtos/mostra/{{$p->id}}">
