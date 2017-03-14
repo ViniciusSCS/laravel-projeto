@@ -47,7 +47,7 @@
                                 </li><!-- end message -->
                             </ul><!-- /.menu -->
                         </li>
-                        <li class="footer"><a href="#">c</a></li>
+                        <li class="footer"><a href="#">View all</a></li>
                     </ul>
                 </li><!-- /.messages-menu -->
 
